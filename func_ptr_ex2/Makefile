@@ -4,6 +4,7 @@
 
 # collects all source files in the current directory in the src variable
 src = $(wildcard *.c)
+
 # transforms the contents of the src variable, changing all file suffixes 
 # from .c to .o, thus constructing the object file list we need
 objs = $(src:.c=.o)
@@ -11,7 +12,9 @@ objs = $(src:.c=.o)
 CC = gcc
 CFLAGS = -Wall -g -std=c99 # -Werror
 RM = rm -f
-MKDIR = mkdir -p
+
+# not used
+# MKDIR = mkdir -p
 # CXXFLAGS =
 # LDFLAGS = -lm
 
