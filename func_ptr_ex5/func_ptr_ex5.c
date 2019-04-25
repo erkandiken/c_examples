@@ -27,6 +27,7 @@ For example, consider the following C program where wrapper() receives a void fu
  can be used to sort arrays in ascending order or descending or by any other order in case of array of structures. 
  Not only this, with function pointers and void pointers, it is possible to use qsort for any data type.
 
+qsort in STL:
 
 void qsort (void* base, size_t num, size_t size,
             int (*compar)(const void*,const void*));
@@ -46,7 +47,6 @@ int compare_float(const void * a, const void * b){
 int main(){
     int arr[] = {10, 5, 15, 12, 90, 80};
     int n = sizeof(arr) / sizeof(arr[0]), i;
-    printf("sizeof(arr): %lu, sizeof(arr[0]): %lu \n", sizeof(arr), sizeof(arr[0]));
 
     qsort(arr, n, sizeof(int), compare);
 
@@ -55,7 +55,6 @@ int main(){
 
     float arrf[] = {10.2, 5.9, 15.0, 12.1, 90.0, 80.5};
     n = sizeof(arrf) / sizeof(arrf[0]);
-    printf("sizeof(arrf): %lu, sizeof(arrf[0]): %lu \n", sizeof(arrf), sizeof(arrf[0]));
 
     qsort(arrf, n, sizeof(float), compare_float);
 
