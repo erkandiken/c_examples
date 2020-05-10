@@ -14,5 +14,3 @@ To clean artifacts:
         make clean
 
 Or go to each subfolder to compile the single example.
-
-        
